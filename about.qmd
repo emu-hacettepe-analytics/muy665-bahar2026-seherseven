@@ -4,6 +4,7 @@ image: profilim.jpeg
 about:
   template: jolla
 ---
+Merhaba, Ben Seher Seven, Hacettepe Üniversitesi Endüstri Mühendisliği - Mühendislik Yönetimi yüksek lisans programında öğrenciyim. 
 
 # **Education**
 
