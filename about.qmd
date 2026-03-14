@@ -1,10 +1,11 @@
 ---
-title: "Hakkımda"
+title: "About Me"
 image: profilim.jpeg
 about:
   template: jolla
 ---
-Merhaba, Ben Seher Seven, Hacettepe Üniversitesi Endüstri Mühendisliği - Mühendislik Yönetimi yüksek lisans programında öğrenciyim. 
+
+Hello, my name is Seher Seven, and I am a master's student in Engineering Management and Business Administration at Hacettepe University.
 
 # **Education**
 
