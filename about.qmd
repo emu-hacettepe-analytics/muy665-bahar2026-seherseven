@@ -1,40 +1,58 @@
 ---
 title: "Hakkımda"
-sidebar: false 
+image: profilim.jpeg
+about:
+  template: jolla
 ---
 
-![](assets/images/vesikalik.jpeg){fig-align="center"}
+# **Education**
 
-# Eğitim
+-   B.S., Manufacturing Engineering, Atılım University, Turkey, 2016 - 2021.
 
--   B.S., ................................., ....................................University, Turkey, 20xx - 20xx.
--   M.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
--   Ph.D.., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+-   M.S., Industrial Engineering, Hacettepe University, Turkey, 2026 - ongoing.s
 
-# İş Tecrübesi
+# **Employements**
 
-## Employements
+1.  Innova Bilişim Çözümleri, Project Management Specialist, Jan 2024 - Current Status
 
-1.  Firm xxx, position xx, year xxx
+2.  Novumek Technology, Project Engineer, October 2021- December 2023
 
-2.  Firm yyy, position yyy, year yyy
+# **Internships**
 
-## Internships
+1.  Atılım University Metal Forming and Excellence Center, Intern, August 2020 - September 2020
 
-1.  Firm aaa, position xx, year xxx
+2.  RMS Defense and Aviation, Intern, June 2019 - July 2019
 
-2.  Firm bbb, position yyy, year yyy
+# **Projects**
 
-# Projects
+Information cannot be given due to confidentiality reasons; information about the project management procedures used will be provided upon request.
 
-1.  TUBİTAK 1001..........................
+1.  September 2020 - June 2021\
+    Atılım University, TURKEY\
+    Single Stage Centrifugal Compressor Design and Optimization (TÜBİTAK–2209-A University Students Research Projects Support Program)
 
-# Publications
+# **Publications**
 
-1.  Dasdemir, E., Batta, R., Koksalan, M., Tezcaner Ozturk, D. (2022) “UAV Routing for Reconnaissance Mission: A Multi-Objective Orienteering Problem with Time-Dependent Prizes and Multiple Connections”, Computers & Operations Research, 145: 105882.
+1.  Seven, S., İbis, M. M., Coskuner, E., Baranoglu, B. (2022). Design of modular of modular planetary gearbox with two-stage planet gears for use in valve actuators. The 19th International Conference on Machine Design and Production (August 31- September 3 2022, Cappadocia, Turkey)
 
-# Competencies
+2.  Cavusoglu, H. S., Seven, S., Baranoglu, B. (2022). Surface roughness investigation with CBN inserts on the turning process of heat treated AISI 420 stainless steel. The 19th International Conference on Machine Design and Production (August 31-September 3 2022, Cappadocia, Turkey)
 
-R, Quarto, Git, Python
+# **Competencies**
 
-# Hobbies
+-   MS PROJECT
+
+-   MS EXCEL
+
+-   MS WORD PRIMAVERA
+
+-   JIRA CONFLUENCE
+
+# **Hobbies**
+
+-   Theatre
+
+-   Social Media
+
+-   Culture & Art Events
+
+-   Play Tennis
