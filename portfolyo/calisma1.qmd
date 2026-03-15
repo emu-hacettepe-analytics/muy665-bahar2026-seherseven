@@ -101,4 +101,3 @@ if (k %% 2 == 0) {
 # Kalan NA kontrolleri
 cat("\nYeni veri çerçevesinde kalan toplam NA sayısı:", sum(is.na(new_data)), "\n")
 cat("anyNA(new_data) sonucu:", anyNA(new_data), "\n")
-
