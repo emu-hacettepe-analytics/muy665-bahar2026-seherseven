@@ -3,9 +3,38 @@ title: "Çalışma 1"
 ---
 
 \
-(Aşağıdakiler örnek olarak verilmiştir.)
+a- Video Özeti 
+Videoda Dr. Mustafa Baydoğan veri bilimi ile endüstri mühendisliği arasındaki ilişkiyi ve bu alanın farklı sektörlerde nasıl kullanıldığını anlatmaktadır. Konuşmada özellikle veri biliminin sadece tahmin yapmakla sınırlı olmadığı, asıl önemli olanın bu tahminleri kullanarak doğru kararlar verebilmek olduğu vurgulanmaktadır. Endüstri mühendisliğinin optimizasyon ve sistem düşüncesi gibi yaklaşımlarının bu noktada veri bilimi çalışmalarını desteklediği ifade edilmektedir.
 
-Bu çalışmada 3 görevimiz var. Bu görevler..... Bunlara sırayla aşağıda cevap arıyoruz.
+Konuşmada farklı sektörlerden örnekler de verilmektedir. Perakende sektöründe mağazalara gönderilecek ürün miktarının belirlenmesi, veri analizi ve talep tahminleri ile planlanabilmektedir. Benzer şekilde e-ticaret sitelerinde ürünlerin sıralanmasında kullanıcı davranışlarından elde edilen veriler kullanılmaktadır. Tıklama, görüntüleme veya sepete ekleme gibi veriler analiz edilerek satışları artıracak sıralama algoritmaları geliştirilebilmektedir.
+
+Enerji sektöründe ise elektrik üretimi ve tüketimi arasındaki dengenin korunmasının çok önemli olduğu ve yanlış tahminlerin ciddi maliyetlere yol açabileceği belirtilmektedir. Bu nedenle tüketim tahminleri yapılırken hava durumu, özel günler veya farklı sosyal olaylar gibi birçok değişken dikkate alınmaktadır.
+
+Ayrıca konuşmada geleneksel makine öğrenmesi ile derin öğrenme yöntemleri arasındaki farklara da değinilmektedir. Geleneksel yöntemlerin daha açıklanabilir olduğu, derin öğrenmenin ise özellikle görüntü veya metin gibi karmaşık verilerde daha başarılı olabildiği ifade edilmektedir. Son olarak veri bilimi çalışmalarında mükemmel model arayışından çok, işe yarayan ve yorumlanabilir modeller geliştirmenin daha önemli olduğu vurgulanmaktadır.
+
+⸻
+
+Sorular
+
+b- Sorular 
+
+b1 - Açık Uçlu Soru
+
+Veri bilimi çalışmalarında sadece tahmin yapmak neden yeterli değildir? Kısaca açıklayınız.
+
+Cevap:
+Çünkü tahmin sonuçlarının karar verme süreçlerine entegre edilmesi gerekir. Tek başına tahmin üretmek yeterli değildir; bu tahminlerin optimizasyon ve iş süreçleriyle birlikte kullanılarak somut kararlar alınmasını sağlaması gerekir.
+
+b2 - Çoktan seçmeli soru
+
+Bir Endüstri Mühendisinin veri bilimi projelerinde "alan uzmanlığı" (domain expertise) sayesinde sağladığı en temel fark aşağıdakilerden hangisidir? 
+
+A) Sadece en yüksek işlemci gücüne sahip bilgisayarı kullanmak.
+B) Veriyi sadece istatistiksel birer sayı olarak görüp modellemek.
+C) Tahminleme sonuçlarını optimizasyon ve iş süreçleriyle birleştirerek uygulanabilir kararlara dönüştürmek.
+D) Veri temizleme aşamasını tamamen atlayarak doğrudan derin öğrenme modellerine geçmek.
+
+Doğru Cevap: C) Tahminleme sonuçlarını optimizasyon ve iş süreçleriyle birleştirerek uygulanabilir kararlara dönüştürmek.
 
 ## (a)
 
@@ -14,3 +43,56 @@ Bu çalışmada 3 görevimiz var. Bu görevler..... Bunlara sırayla aşağıda 
 ```
 
 ## (b)
+
+#| message: false
+#| warning: false
+
+# 1. Paket ve Veri Setinin Yüklenmesi
+library(dslabs)
+library(dplyr)
+data("polls_us_election_2016")
+
+# 2. Değişken Tanımlama
+my_first <- "Seher" 
+my_birth_year <- 1998 
+
+# 3. k Değerinin Hesaplanması
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8
+cat("Hesaplanan k değeri:", k, "\n")
+
+# 4. Orijinal Veri Setinden k Adet Satır Görüntüleme
+if (k %% 2 == 0) {
+  print(head(polls_us_election_2016, k))
+} else {
+  print(tail(polls_us_election_2016, k))
+}
+
+# 5. NA (Eksik Veri) Analizi
+total_na <- sum(is.na(polls_us_election_2016))
+cat("\nToplam NA sayısı:", total_na, "\n")
+
+# Sütun başına NA sayıları (İlk 8 sütun)
+na_counts <- colSums(is.na(polls_us_election_2016))
+print(sort(na_counts, decreasing = TRUE)[1:8])
+
+# 6. NA Değerlerinin Güncellenmesi (Yeni Nesne)
+new_data <- polls_us_election_2016
+
+for(i in 1:ncol(new_data)) {
+  if(is.numeric(new_data[[i]])) {
+    new_data[[i]][is.na(new_data[[i]])] <- my_birth_year
+  } else {
+    new_data[[i]] <- as.character(new_data[[i]])
+    new_data[[i]][is.na(new_data[[i]])] <- paste0(my_first, "_", k)
+  }
+}
+
+# 7. Yeni Veri Çerçevesi Çıktıları
+if (k %% 2 == 0) {
+  print(head(new_data, k))
+} else {
+  print(tail(new_data, k))
+}
+
+cat("\nYeni veri setinde kalan toplam NA sayısı:", sum(is.na(new_data)), "\n")
+cat("anyNA sonucu:", anyNA(new_data), "\n")
