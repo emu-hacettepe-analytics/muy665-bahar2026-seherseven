@@ -387,14 +387,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#a" id="toc-a" class="nav-link active" data-scroll-target="#a">(a)</a></li>
   <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
-  <li><a href="#paket-ve-veri-setinin-yüklenmesi" id="toc-paket-ve-veri-setinin-yüklenmesi" class="nav-link" data-scroll-target="#paket-ve-veri-setinin-yüklenmesi">1. Paket ve Veri Setinin Yüklenmesi</a></li>
+  <li><a href="#paketlerin-ve-veri-setinin-yüklenmesi" id="toc-paketlerin-ve-veri-setinin-yüklenmesi" class="nav-link" data-scroll-target="#paketlerin-ve-veri-setinin-yüklenmesi">1. Paketlerin ve Veri Setinin Yüklenmesi</a></li>
   <li><a href="#değişken-tanımlama" id="toc-değişken-tanımlama" class="nav-link" data-scroll-target="#değişken-tanımlama">2. Değişken Tanımlama</a></li>
   <li><a href="#k-değerinin-hesaplanması" id="toc-k-değerinin-hesaplanması" class="nav-link" data-scroll-target="#k-değerinin-hesaplanması">3. k Değerinin Hesaplanması</a></li>
   <li><a href="#orijinal-veri-setinden-k-adet-satır-görüntüleme" id="toc-orijinal-veri-setinden-k-adet-satır-görüntüleme" class="nav-link" data-scroll-target="#orijinal-veri-setinden-k-adet-satır-görüntüleme">4. Orijinal Veri Setinden k Adet Satır Görüntüleme</a></li>
+  <li><a href="#k-çift-ise-ilk-k-satır-tek-ise-son-k-satır-görüntülenir." id="toc-k-çift-ise-ilk-k-satır-tek-ise-son-k-satır-görüntülenir." class="nav-link" data-scroll-target="#k-çift-ise-ilk-k-satır-tek-ise-son-k-satır-görüntülenir.">k çift ise ilk k satır, tek ise son k satır görüntülenir.</a></li>
   <li><a href="#na-eksik-veri-analizi" id="toc-na-eksik-veri-analizi" class="nav-link" data-scroll-target="#na-eksik-veri-analizi">5. NA (Eksik Veri) Analizi</a></li>
-  <li><a href="#sütun-başına-na-sayıları-ilk-8-sütun" id="toc-sütun-başına-na-sayıları-ilk-8-sütun" class="nav-link" data-scroll-target="#sütun-başına-na-sayıları-ilk-8-sütun">Sütun başına NA sayıları (İlk 8 sütun)</a></li>
+  <li><a href="#sütun-başına-na-sayıları-ilk-8-sütun-büyükten-küçüğe-sıralı" id="toc-sütun-başına-na-sayıları-ilk-8-sütun-büyükten-küçüğe-sıralı" class="nav-link" data-scroll-target="#sütun-başına-na-sayıları-ilk-8-sütun-büyükten-küçüğe-sıralı">Sütun başına NA sayıları (İlk 8 sütun, büyükten küçüğe sıralı)</a></li>
   <li><a href="#na-değerlerinin-güncellenmesi-yeni-nesne" id="toc-na-değerlerinin-güncellenmesi-yeni-nesne" class="nav-link" data-scroll-target="#na-değerlerinin-güncellenmesi-yeni-nesne">6. NA Değerlerinin Güncellenmesi (Yeni Nesne)</a></li>
+  <li><a href="#orijinal-veri-setini-bozmadan-yeni-bir-nesneye-kopyalıyoruz" id="toc-orijinal-veri-setini-bozmadan-yeni-bir-nesneye-kopyalıyoruz" class="nav-link" data-scroll-target="#orijinal-veri-setini-bozmadan-yeni-bir-nesneye-kopyalıyoruz">Orijinal veri setini bozmadan yeni bir nesneye kopyalıyoruz</a></li>
+  <li><a href="#sayısal-sütunlar-için-na---my_birth_year" id="toc-sayısal-sütunlar-için-na---my_birth_year" class="nav-link" data-scroll-target="#sayısal-sütunlar-için-na---my_birth_year">Sayısal sütunlar için NA -&gt; my_birth_year</a></li>
+  <li><a href="#karakterfaktör-sütunlar-için-na---ad_k" id="toc-karakterfaktör-sütunlar-için-na---ad_k" class="nav-link" data-scroll-target="#karakterfaktör-sütunlar-için-na---ad_k">Karakter/Faktör sütunlar için NA -&gt; ad_k</a></li>
   <li><a href="#yeni-veri-çerçevesi-çıktıları" id="toc-yeni-veri-çerçevesi-çıktıları" class="nav-link" data-scroll-target="#yeni-veri-çerçevesi-çıktıları">7. Yeni Veri Çerçevesi Çıktıları</a></li>
+  <li><a href="#yeni-veri-çerçevesinin-k-satırını-görüntüleme-aynı-kural-ile" id="toc-yeni-veri-çerçevesinin-k-satırını-görüntüleme-aynı-kural-ile" class="nav-link" data-scroll-target="#yeni-veri-çerçevesinin-k-satırını-görüntüleme-aynı-kural-ile">Yeni veri çerçevesinin k satırını görüntüleme (Aynı kural ile)</a></li>
+  <li><a href="#kalan-na-kontrolleri" id="toc-kalan-na-kontrolleri" class="nav-link" data-scroll-target="#kalan-na-kontrolleri">Kalan NA kontrolleri</a></li>
   </ul>
 </nav>
 </nav>
@@ -425,6 +431,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="a" class="level2">
+<h2 class="anchored" data-anchor-id="a">(a)</h2>
 <p><br>
 a- Video Özeti Videoda Dr.&nbsp;Mustafa Baydoğan veri bilimi ile endüstri mühendisliği arasındaki ilişkiyi ve bu alanın farklı sektörlerde nasıl kullanıldığını anlatmaktadır. Konuşmada özellikle veri biliminin sadece tahmin yapmakla sınırlı olmadığı, asıl önemli olanın bu tahminleri kullanarak doğru kararlar verebilmek olduğu vurgulanmaktadır. Endüstri mühendisliğinin optimizasyon ve sistem düşüncesi gibi yaklaşımlarının bu noktada veri bilimi çalışmalarını desteklediği ifade edilmektedir.</p>
 <p>Konuşmada farklı sektörlerden örnekler de verilmektedir. Perakende sektöründe mağazalara gönderilecek ürün miktarının belirlenmesi, veri analizi ve talep tahminleri ile planlanabilmektedir. Benzer şekilde e-ticaret sitelerinde ürünlerin sıralanmasında kullanıcı davranışlarından elde edilen veriler kullanılmaktadır. Tıklama, görüntüleme veya sepete ekleme gibi veriler analiz edilerek satışları artıracak sıralama algoritmaları geliştirilebilmektedir.</p>
@@ -445,8 +453,6 @@ a- Video Özeti Videoda Dr.&nbsp;Mustafa Baydoğan veri bilimi ile endüstri mü
 <li>Veri temizleme aşamasını tamamen atlayarak doğrudan derin öğrenme modellerine geçmek.</li>
 </ol>
 <p>Doğru Cevap: C) Tahminleme sonuçlarını optimizasyon ve iş süreçleriyle birleştirerek uygulanabilir kararlara dönüştürmek.</p>
-<section id="a" class="level2">
-<h2 class="anchored" data-anchor-id="a">(a)</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -458,8 +464,8 @@ a- Video Özeti Videoda Dr.&nbsp;Mustafa Baydoğan veri bilimi ile endüstri mü
 <h2 class="anchored" data-anchor-id="b">(b)</h2>
 <p>#| message: false #| warning: false</p>
 </section>
-<section id="paket-ve-veri-setinin-yüklenmesi" class="level1">
-<h1>1. Paket ve Veri Setinin Yüklenmesi</h1>
+<section id="paketlerin-ve-veri-setinin-yüklenmesi" class="level1">
+<h1>1. Paketlerin ve Veri Setinin Yüklenmesi</h1>
 <p>library(dslabs) library(dplyr) data(“polls_us_election_2016”)</p>
 </section>
 <section id="değişken-tanımlama" class="level1">
@@ -472,25 +478,44 @@ a- Video Özeti Videoda Dr.&nbsp;Mustafa Baydoğan veri bilimi ile endüstri mü
 </section>
 <section id="orijinal-veri-setinden-k-adet-satır-görüntüleme" class="level1">
 <h1>4. Orijinal Veri Setinden k Adet Satır Görüntüleme</h1>
+</section>
+<section id="k-çift-ise-ilk-k-satır-tek-ise-son-k-satır-görüntülenir." class="level1">
+<h1>k çift ise ilk k satır, tek ise son k satır görüntülenir.</h1>
 <p>if (k %% 2 == 0) { print(head(polls_us_election_2016, k)) } else { print(tail(polls_us_election_2016, k)) }</p>
 </section>
 <section id="na-eksik-veri-analizi" class="level1">
 <h1>5. NA (Eksik Veri) Analizi</h1>
-<p>total_na &lt;- sum(is.na(polls_us_election_2016)) cat(“NA sayısı:”, total_na, “”)</p>
+<p>total_na &lt;- sum(is.na(polls_us_election_2016)) cat(“veri setindeki toplam NA sayısı:”, total_na, “”)</p>
 </section>
-<section id="sütun-başına-na-sayıları-ilk-8-sütun" class="level1">
-<h1>Sütun başına NA sayıları (İlk 8 sütun)</h1>
-<p>na_counts &lt;- colSums(is.na(polls_us_election_2016)) print(sort(na_counts, decreasing = TRUE)[1:8])</p>
+<section id="sütun-başına-na-sayıları-ilk-8-sütun-büyükten-küçüğe-sıralı" class="level1">
+<h1>Sütun başına NA sayıları (İlk 8 sütun, büyükten küçüğe sıralı)</h1>
+<p>na_counts &lt;- colSums(is.na(polls_us_election_2016)) cat(“başına NA sayıları (İlk 8):”) print(sort(na_counts, decreasing = TRUE)[1:8])</p>
 </section>
 <section id="na-değerlerinin-güncellenmesi-yeni-nesne" class="level1">
 <h1>6. NA Değerlerinin Güncellenmesi (Yeni Nesne)</h1>
+</section>
+<section id="orijinal-veri-setini-bozmadan-yeni-bir-nesneye-kopyalıyoruz" class="level1">
+<h1>Orijinal veri setini bozmadan yeni bir nesneye kopyalıyoruz</h1>
 <p>new_data &lt;- polls_us_election_2016</p>
-<p>for(i in 1:ncol(new_data)) { if(is.numeric(new_data[[i]])) { new_data[[i]][is.na(new_data[[i]])] &lt;- my_birth_year } else { new_data[[i]] &lt;- as.character(new_data[[i]]) new_data[[i]][is.na(new_data[[i]])] &lt;- paste0(my_first, “_“, k) } }</p>
+</section>
+<section id="sayısal-sütunlar-için-na---my_birth_year" class="level1">
+<h1>Sayısal sütunlar için NA -&gt; my_birth_year</h1>
+</section>
+<section id="karakterfaktör-sütunlar-için-na---ad_k" class="level1">
+<h1>Karakter/Faktör sütunlar için NA -&gt; ad_k</h1>
+<p>new_data &lt;- new_data %&gt;% mutate(across(where(is.numeric), ~ ifelse(is.na(.), my_birth_year, .))) %&gt;% mutate(across(where(is.character) | where(is.factor), ~ ifelse(is.na(.), paste0(my_first, “_“, k), as.character(.))))</p>
 </section>
 <section id="yeni-veri-çerçevesi-çıktıları" class="level1">
 <h1>7. Yeni Veri Çerçevesi Çıktıları</h1>
+<p>cat(“— Yeni Veri Çerçevesi Çıktıları —”)</p>
+</section>
+<section id="yeni-veri-çerçevesinin-k-satırını-görüntüleme-aynı-kural-ile" class="level1">
+<h1>Yeni veri çerçevesinin k satırını görüntüleme (Aynı kural ile)</h1>
 <p>if (k %% 2 == 0) { print(head(new_data, k)) } else { print(tail(new_data, k)) }</p>
-<p>cat(“veri setinde kalan toplam NA sayısı:”, sum(is.na(new_data)), “”) cat(“anyNA sonucu:”, anyNA(new_data), “”)</p>
+</section>
+<section id="kalan-na-kontrolleri" class="level1">
+<h1>Kalan NA kontrolleri</h1>
+<p>cat(“veri çerçevesinde kalan toplam NA sayısı:”, sum(is.na(new_data)), “”) cat(“anyNA(new_data) sonucu:”, anyNA(new_data), “”)</p>
 
 
 </section>

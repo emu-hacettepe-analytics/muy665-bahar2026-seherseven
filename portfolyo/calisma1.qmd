@@ -1,7 +1,7 @@
 ---
 title: "Çalışma 1"
 ---
-
+## (a)
 \
 a- Video Özeti 
 Videoda Dr. Mustafa Baydoğan veri bilimi ile endüstri mühendisliği arasındaki ilişkiyi ve bu alanın farklı sektörlerde nasıl kullanıldığını anlatmaktadır. Konuşmada özellikle veri biliminin sadece tahmin yapmakla sınırlı olmadığı, asıl önemli olanın bu tahminleri kullanarak doğru kararlar verebilmek olduğu vurgulanmaktadır. Endüstri mühendisliğinin optimizasyon ve sistem düşüncesi gibi yaklaşımlarının bu noktada veri bilimi çalışmalarını desteklediği ifade edilmektedir.
@@ -36,7 +36,7 @@ D) Veri temizleme aşamasını tamamen atlayarak doğrudan derin öğrenme model
 
 Doğru Cevap: C) Tahminleme sonuçlarını optimizasyon ve iş süreçleriyle birleştirerek uygulanabilir kararlara dönüştürmek.
 
-## (a)
+
 
 ```{r}
 1 + 1
@@ -47,20 +47,21 @@ Doğru Cevap: C) Tahminleme sonuçlarını optimizasyon ve iş süreçleriyle bi
 #| message: false
 #| warning: false
 
-# 1. Paket ve Veri Setinin Yüklenmesi
+# 1. Paketlerin ve Veri Setinin Yüklenmesi
 library(dslabs)
 library(dplyr)
 data("polls_us_election_2016")
 
 # 2. Değişken Tanımlama
-my_first <- "Seher" 
-my_birth_year <- 1998 
+my_first <- "Seher"
+my_birth_year <- 1998
 
 # 3. k Değerinin Hesaplanması
 k <- (nchar(my_first) + my_birth_year) %% 15 + 8
 cat("Hesaplanan k değeri:", k, "\n")
 
 # 4. Orijinal Veri Setinden k Adet Satır Görüntüleme
+# k çift ise ilk k satır, tek ise son k satır görüntülenir.
 if (k %% 2 == 0) {
   print(head(polls_us_election_2016, k))
 } else {
@@ -69,30 +70,35 @@ if (k %% 2 == 0) {
 
 # 5. NA (Eksik Veri) Analizi
 total_na <- sum(is.na(polls_us_election_2016))
-cat("\nToplam NA sayısı:", total_na, "\n")
+cat("\nTüm veri setindeki toplam NA sayısı:", total_na, "\n")
 
-# Sütun başına NA sayıları (İlk 8 sütun)
+# Sütun başına NA sayıları (İlk 8 sütun, büyükten küçüğe sıralı)
 na_counts <- colSums(is.na(polls_us_election_2016))
+cat("\nSütun başına NA sayıları (İlk 8):\n")
 print(sort(na_counts, decreasing = TRUE)[1:8])
 
 # 6. NA Değerlerinin Güncellenmesi (Yeni Nesne)
+# Orijinal veri setini bozmadan yeni bir nesneye kopyalıyoruz
 new_data <- polls_us_election_2016
 
-for(i in 1:ncol(new_data)) {
-  if(is.numeric(new_data[[i]])) {
-    new_data[[i]][is.na(new_data[[i]])] <- my_birth_year
-  } else {
-    new_data[[i]] <- as.character(new_data[[i]])
-    new_data[[i]][is.na(new_data[[i]])] <- paste0(my_first, "_", k)
-  }
-}
+# Sayısal sütunlar için NA -> my_birth_year
+# Karakter/Faktör sütunlar için NA -> ad_k
+new_data <- new_data %>%
+  mutate(across(where(is.numeric), ~ ifelse(is.na(.), my_birth_year, .))) %>%
+  mutate(across(where(is.character) | where(is.factor), 
+                ~ ifelse(is.na(.), paste0(my_first, "_", k), as.character(.))))
 
 # 7. Yeni Veri Çerçevesi Çıktıları
+cat("\n--- Yeni Veri Çerçevesi Çıktıları ---\n")
+
+# Yeni veri çerçevesinin k satırını görüntüleme (Aynı kural ile)
 if (k %% 2 == 0) {
   print(head(new_data, k))
 } else {
   print(tail(new_data, k))
 }
 
-cat("\nYeni veri setinde kalan toplam NA sayısı:", sum(is.na(new_data)), "\n")
-cat("anyNA sonucu:", anyNA(new_data), "\n")
+# Kalan NA kontrolleri
+cat("\nYeni veri çerçevesinde kalan toplam NA sayısı:", sum(is.na(new_data)), "\n")
+cat("anyNA(new_data) sonucu:", anyNA(new_data), "\n")
+
