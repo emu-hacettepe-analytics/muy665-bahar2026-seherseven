@@ -44,7 +44,7 @@ Doğru Cevap: C) Tahminleme sonuçlarını optimizasyon ve iş süreçleriyle bi
 
 ```{r}
 ```{r}
-#| echo: false
+#| echo: true
 #| message: false
 #| warning: false
 
@@ -55,7 +55,7 @@ library(dplyr)
 # Veri setinin çağrılması
 data("polls_us_election_2016")
 
-# Kendi bilgilerin
+# Kendi bilgilerim
 my_first <- "Seher"
 my_birth_year <- 1998
 
